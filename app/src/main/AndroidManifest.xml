@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WackAMole">
+        <activity android:name=".options"></activity>
+        <activity
+            android:name=".WmtitleScreen"
+            android:label="@string/title_activity_wmtitle_screen"
+            android:theme="@style/Theme.WackAMole.NoActionBar" />
+        <activity android:name=".GameOver" />
+        <activity android:name=".HighScores" />
         <activity android:name=".Game">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

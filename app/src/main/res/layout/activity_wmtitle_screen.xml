@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="high_scores.xml"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".WmtitleScreen">
 
     <TextView
-        android:id="@+id/gotvmessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_weight=".5"
         android:gravity="center"
-        android:text="You hit times." />
+        android:text="Title" />
 
-    <TextView
-        android:id="@+id/gotvGameOver"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Game Over!" />
-
+        android:layout_weight="2" />
 
     <Button
-        android:id="@+id/goButtonPlay"
+        android:id="@+id/playbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Play Again" />
+        android:text="Play" />
 
     <Button
-        android:id="@+id/goHighScores"
+        android:id="@+id/startOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View High Scores" />
+        android:onClick="onClick"
+        android:text="Options"/>
+    
 </LinearLayout>
