@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".WmtitleScreen">
+    tools:context=".WmtitleScreen"> 
 
     <TextView
         android:layout_width="match_parent"
@@ -19,11 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_weight="2" />
 
-    <Button
+    <ImageButton
         android:id="@+id/playbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Play" />
+        android:src="@drawable/playButton" />
 
     <Button
         android:id="@+id/startOptions"

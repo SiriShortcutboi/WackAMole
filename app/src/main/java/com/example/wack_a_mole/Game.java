@@ -1,6 +1,6 @@
 package com.example.wack_a_mole;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity; 
 
 import android.content.Intent;
 import android.content.SharedPreferences;

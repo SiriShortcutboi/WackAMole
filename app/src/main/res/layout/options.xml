@@ -6,7 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Options">
+    tools:context=".options">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        app:srcCompat="@drawable/Optionsminecraft" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +25,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chose number of moles:" />
+        android:text="Chose your game mode:" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -60,7 +68,15 @@
             android:layout_weight="1"
             android:checked="true"
             android:text="Hard" />
-        
+
+        <RadioButton
+            android:id="@+id/rbidiot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Idiot" />
+
     </RadioGroup>
     
     <TextView

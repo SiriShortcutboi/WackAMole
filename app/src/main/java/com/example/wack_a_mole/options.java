@@ -1,7 +1,7 @@
 
 package com.example.wack_a_mole;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity; 
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -36,7 +36,7 @@ public class options extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         // if the "play" button was clicked
-        if (v.getId()!=R.id.buttonplay){...}
+        if (v.getId()!=R.id.goButtonPlay){...}
         Intent playintent = new Intent(this,Game.class);
 
         String name;
@@ -45,8 +45,10 @@ public class options extends AppCompatActivity implements View.OnClickListener {
         int numMoles;
 
         EditText etName = (EditText)findViewById(R.id.etName);
+        RadioButton idiot = (RadioButton)findViewById(R.id.rbidiot);
         RadioButton easy = (RadioButton)findViewById(R.id.rbEasy);
-        RadioButton mdeium = (RadioButton)findViewById(R.id.rbMedium);
+        RadioButton medium = (RadioButton)findViewById(R.id.rbMedium);
+        RadioButton hard = (RadioButton)findViewById(R.id.rbHard);
         SeekBar sb = (SeekBar)findViewById(R.id.sbDuration);
         Spinner sp  = (Spinner)findViewById(R.id.spMoles);
 
@@ -54,33 +56,36 @@ public class options extends AppCompatActivity implements View.OnClickListener {
         duration = sb.getProgress();
         numMoles = sp.getSelectedItemPosition()+3;
         if (easy.isChecked()){
-            difficulty = 3;
+            difficulty = 4;
         }
-        else if(medium.isChecked)){
-    difficulty = 2;
+        else if(medium.isChecked()){
+    difficulty = 3;
+        }
+        else if(hard.isChecked()){
+            difficulty = 2;
         }
         else{
             difficulty=1;
         }
 
-        SaveSettingsInIntent(difficulty, name, numMoles duration, playintent);
+        SaveSettingsinIntent(difficulty, name, numMoles duration, playintent);
         saveSettingsinPrefs(difficulty, name, numMoles duration);
 
         startActivity(playintent);
     }
-    private void saveSetttingInPrefs(int difficulty, String numMoles, duration);
+    private void saveSettingInPrefs(int difficulty, String numMoles, duration);
 
-    startActivity(playintent);
+    startActivity(playIntent);
     }
-    private void saveSsettinginPefs(int difficulty, string name,
+    private void saveSettingsinPrefs(int difficulty, String name,
                                     int numMoles,int duration){
     // get a reference to the shared preferences for our application
     SharedPreferences prefs = getSharedPreferences("whackSettings",MODE_PRIVATE);
-    // get an ediitor object that we can use to write our own option setteings
+    // get an editor object that we can use to write our own option settings
         SharedPreferences.Editor editor = prefs.edit();
 
         // sae all option information to the shared Preferences area
-        editor.putstring("name",name);
+        editor.putString("name",name);
         editor.putInt("difficulty",difficulty);
         editor.putInt("numMoles",numMoles);
         editor.putInt("duration",duration);
