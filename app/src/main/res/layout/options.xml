@@ -25,7 +25,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chose your game mode:" />
+        android:text="Choose your game mode:" />
 
     <Spinner
         android:layout_width="match_parent"
