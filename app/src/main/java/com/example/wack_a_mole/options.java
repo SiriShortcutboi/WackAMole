@@ -1,6 +1,8 @@
 
 package com.example.wack_a_mole;
 
+//push from home
+
 import androidx.appcompat.app.AppCompatActivity; 
 
 import android.content.Intent;
@@ -68,8 +70,8 @@ public class options extends AppCompatActivity implements View.OnClickListener {
             difficulty=1;
         }
 
-        SaveSettingsinIntent(difficulty, name, numMoles duration, playintent);
-        saveSettingsinPrefs(difficulty, name, numMoles duration);
+        SaveSettingsinIntent(difficulty, name, numMoles, duration, playintent);
+        saveSettingsinPrefs(difficulty, name, numMoles, duration);
 
         startActivity(playintent);
     }

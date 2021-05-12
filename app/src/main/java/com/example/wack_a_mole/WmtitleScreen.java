@@ -14,6 +14,7 @@ import android.view.View;
 public class WmtitleScreen extends AppCompatActivity implements View.OnClickListener {
     Intent playintent;
     Intent optionIntent;
+    Intent idiotPlayIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class WmtitleScreen extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_wmtitle_screen);
         playintent = new Intent(this, Game.class);
         optionIntent = new Intent(this, options.class);
+        idiotPlayIntent = new Intent(this, options.class);
     }
 
 
@@ -28,11 +30,12 @@ public class WmtitleScreen extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         if(v.getId() == R.id.playbutton){
             startActivity(playintent);
-            finish();
-        }
-     else if (v.getId() == R.id.startOptions){
+            finish(); }
+     else if(v.getId() == R.id.startOptions){
          startActivity(optionIntent);
-            finish();
-        }
+            finish(); }
+        else if (v.getId() == R.id.startOptions){
+            startActivity(idiotPlayIntent);
+            finish(); }
     }
 }
